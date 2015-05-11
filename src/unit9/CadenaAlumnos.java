@@ -3,12 +3,16 @@ package unit9;
 public class CadenaAlumnos {
 
 	/**
-	 * @param args
+	 * @author Fraini Sánchez
+	 *
 	 */
+	CadenaAlumnos(){
+		
+	}
 	//MÉTODO QUE MIRA SI DOS CADENAS SON IGUALES.
 	public boolean sonIguales(String cadena1, String cadena2)
 	{
-		if(cadena1.length() == cadena1.length())
+		if(cadena1.equals(cadena2))
 		{
 			return true;
 		}
@@ -213,3 +217,7 @@ public class CadenaAlumnos {
 			
 			if(auxCadena1.length() > auxCadena2.length())
 				return true;
+			else
+				return false;
+		}
+}
