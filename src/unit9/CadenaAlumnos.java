@@ -109,33 +109,20 @@ public class CadenaAlumnos {
 	
 	public String extraerSubstring(String cadena, int posicionInicio)
 	{
-		char[] cCadena = cadena.toCharArray();
-		String aux = "";
-		for(int i=0; i < cCadena.length; i++)
-		{
-			if(i > posicionInicio)
-				aux += cCadena[i];
-		}
-		
+		String aux = cadena.substring(posicionInicio);
 		return aux;
 	}
 	
 	public String extraerSubstring(String cadena, int posicionInicio, int posicionFinal)
 	{
-		char[] cCadena = cadena.toCharArray();
-		String aux = "";
-		for(int i=0; i < cCadena.length; i++)
-		{
-			if(i > posicionInicio && i <  posicionFinal)
-				aux += cCadena[i];
-		}
+		String aux = cadena.substring(posicionInicio, posicionFinal);
 		
 		return aux;
 	}
 	
 	public String concatenaCadenas(String cadena1, String cadena2)
 	{
-		String aux = cadena1 + " " +cadena2;
+		String aux = cadena1.concat(cadena2);
 		return aux;
 	}
 	

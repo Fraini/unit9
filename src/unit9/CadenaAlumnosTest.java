@@ -6,11 +6,6 @@ import org.junit.Test;
 
 public class CadenaAlumnosTest {
 
-	@Test
-	public void testCadenaAlumnos() {
-		fail("Not yet implemented");
-	}
-
 	/**
 	 * 	@parama a) cadena1: entornos, cadena2: ento. Para conocer el resultado emplearemos el método
 		equals de la clase String del API de Java
@@ -155,15 +150,15 @@ public class CadenaAlumnosTest {
 	@Test
 	public void testEmpiezaCon() {
 		String a = "FRAINI";
-		String prefijo = "I";
+		String prefijo = "F";
 		assertEquals(true,new CadenaAlumnos().empiezaCon(a, prefijo));
 	}
 
 	@Test
 	public void testAcabaEn() {
 		String a = "FRAINI";
-		String prefijo = "F";
-		assertEquals(true,new CadenaAlumnos().acabaEn(a, prefijo));
+		String sufijo = "I";
+		assertEquals(true,new CadenaAlumnos().acabaEn(a, sufijo));
 	}
 
 	@Test
@@ -190,7 +185,9 @@ public class CadenaAlumnosTest {
 
 	@Test
 	public void testConcatenaCadenas() {
-		fail("Not yet implemented");
+		String cadena1 = "Hola";
+		String cadena2 = " Mundo";
+		assertEquals("Hola Mundo",new CadenaAlumnos().concatenaCadenas(cadena1, cadena2));
 	}
 
 	//Método que prueba si las dos cadenas son iguales ignorando mayúsculas
