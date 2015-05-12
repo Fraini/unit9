@@ -146,61 +146,7 @@ public class CadenaAlumnos {
         }        
         return reemplazada;
     }
-    /**
-     * Método que nos permite nos permite dividir una cadena en base a las 
-     * ocurrencias de una expresión regular definida dentro. 
-     * @param cadena: a buscar la expresión regular
-     * @param regla: expresión a buscar
-     * @param limite: tope máximo de subcadenas a mostrar
-     */
-    public static void muestraSplitLimite(String cadena, String regla, int limite){
-        int posiciones [] = new int [cadena.length() - regla.length()];
-        char [] cad = cadena.toCharArray();
-        int j = 0;
-        
-        posiciones = apareceEn(cadena, regla);
-        for(int i = 0; limite > 0 && i < posiciones.length && posiciones[i] != -1 ; i++){
-            limite--;
-            for(; j < posiciones[i] || (j < cad.length && limite == 0); j++){
-                out.print(cad[j]);
-            }            
-            j = posiciones[i] + regla.length();
-            out.println();
-        }
-        if(limite > 0){
-            for(; j < cad.length; j++){
-                out.print(cad[j]);
-            }
-            out.println("");
-        }
-            
-    }
-    /**
-     * Método que nos permite nos permite dividir una cadena en base a las 
-     * ocurrencias de una expresión regular definida dentro. 
-     * @param cadena: a buscar la expresión regular
-     * @param: regla: expresión a buscar
-     */    
-    public static void muestraSplit(String cadena, String regla){
-        int posiciones [] = new int [cadena.length() - regla.length()];
-        char [] cad = cadena.toCharArray();
-        int j = 0;
-        
-        posiciones = apareceEn(cadena, regla);
-        for(int i = 0; i < posiciones.length && posiciones[i] != -1; i++){
-            for(; j < posiciones[i]; j++){
-                out.print(cad[j]);
-            }
-            j = posiciones[i] + regla.length();
-            out.println("");
-        }
-        if(j != cad.length){
-            for(; j < cad.length; j++){
-                out.print(cad[j]);
-            }
-            out.println("");
-        }
-    }
+    
     /**
      * Método que elimina los espacios que se encuentran en una cadena
      * @param cadena:cadena a eliminar sus espacios
