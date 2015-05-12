@@ -380,39 +380,5 @@ public class CadenaAlumnos {
         }
         return total;
     }  
-    /**
-     * Método que comprueba si son letras todo lo que contiene cadena
-     * Este método convierte el String a cadena de caracteres e 
-     * irá recorriendo carácter a carácter del vector comprobándolo
-     * @param cadena: String a comprobar si contiene sólo letras
-     * @return true si son solo letras, false si hay otro carácter que no sea una letra
-     */    
-    public static boolean sonLetras(String cadena){
-        char []texto = cadena.toCharArray();
-        boolean esTexto = true;
-        for(int i = 0; i < texto.length && esTexto; i++){
-            if(!((texto[i] >= 'a' && texto[i] <= 'z') || 
-                    (texto[i] >= 'A' && texto[i] <= 'Z'))){
-                esTexto = false;
-            }                
-        }
-        return esTexto;
-    }
-    /**
-     * Método que comprueba si son letras todo lo que contiene cadena
-     * Este método irá recorriendo carácter a carácter del string comprobándolo
-     * @param cadena: String a comprobar si contiene sólo letras
-     * @return true si son solo letras, false si hay otro carácter que no sea una letra
-     */
-    public static boolean sonLetras2(String cadena){
-        boolean esTexto = true;
-        for(int i = 0; i < cadena.length(); i++){
-            if(!((cadena.charAt(i) >= 'a' && cadena.charAt(i) <= 'z') || 
-                    (cadena.charAt(i) >= 'A' && cadena.charAt(i) <= 'Z'))){
-                esTexto = false;
-            }               
-        }
-        return esTexto;
-    }
 }
    

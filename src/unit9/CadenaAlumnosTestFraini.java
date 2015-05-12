@@ -189,57 +189,76 @@ public class CadenaAlumnosTestFraini {
 
 	@Test
 	public void testConvertirMinusculas() {
-		fail("Not yet implemented");
+		String cadena = "FRAINI";
+		String res_esperado = cadena.toLowerCase();
+		String res_devuelto = CadenaAlumnos.convertirMinusculas(cadena);
+		assertEquals(res_esperado,res_devuelto );
 	}
 
 	@Test
 	public void testLongitudCadena() {
-		fail("Not yet implemented");
+		String cadena = "Fraini";
+		long res_esperado = cadena.length();
+		
+		long res_devuelto = CadenaAlumnos.longitudCadena(cadena);
+		assertEquals(res_esperado,res_devuelto );
 	}
 
 	@Test
 	public void testEmpiezaCon() {
-		fail("Not yet implemented");
+		String cadena = "Fraini";
+		String prefijo = "F";
+		boolean res_esperado = cadena.startsWith(prefijo);
+		boolean res_devuelto =  CadenaAlumnos.empiezaCon(cadena, prefijo);
+		assertEquals(res_esperado,res_devuelto );
 	}
 
 	@Test
 	public void testAcabaEn() {
-		fail("Not yet implemented");
+		String cadena = "Fraini";
+		String prefijo = "F";
+		boolean res_esperado = cadena.endsWith(prefijo);
+		boolean res_devuelto =  CadenaAlumnos.acabaEn(cadena, prefijo);
+		assertEquals(res_esperado,res_devuelto );
 	}
 
 	@Test
 	public void testPosicionPrimeraCadena() {
-		fail("Not yet implemented");
+		String cadena = "Fraini";
+		String buscar = "F";
+		long res_esperado = cadena.indexOf(buscar);
+		long res_devuelto =  CadenaAlumnos.posicionPrimeraCadena(cadena, buscar);
+		assertEquals(res_esperado,res_devuelto );
 	}
 
-	@Test
-	public void testApareceEn() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testExtraerSubstringStringInt() {
-		fail("Not yet implemented");
+		String cadena = "Fraini";
+		int posicionInicio = 2;
+		String res_esperado = cadena.substring(posicionInicio);
+		String res_devuelto =  CadenaAlumnos.extraerSubstring(cadena, posicionInicio);
+		assertEquals(res_esperado,res_devuelto );
 	}
 
-	@Test
+	/*@Test
 	public void testExtraerSubstringStringIntInt() {
-		fail("Not yet implemented");
-	}
+		String cadena = "fraini sanchez";
+		int posicionInicio = 3;
+		int posicionFinal = 8;
+		
+		String res_esperado = cadena.substring(posicionInicio, posicionFinal);
+		String res_devuelto =  CadenaAlumnos.extraerSubstring(cadena, posicionInicio, posicionFinal);
+		assertEquals(res_esperado,res_devuelto );
+	}*/
 
 	@Test
 	public void testConcatenaCadenas() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSonLetras() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSonLetras2() {
-		fail("Not yet implemented");
+		String cadena1 = "hola";
+		String cadena2 = "mundo";
+		String res_esperado = cadena1.concat(cadena2);
+		String res_devuelto = CadenaAlumnos.concatenaCadenas(cadena1, cadena2);
+		assertEquals(res_esperado,res_devuelto );
 	}
 
 }
