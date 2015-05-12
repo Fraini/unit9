@@ -175,12 +175,17 @@ public class CadenaAlumnosTest {
 
 	@Test
 	public void testExtraerSubstringStringInt() {
-		fail("Not yet implemented");
+		String cadena = "FRAINI";
+		int pos = 1;
+		assertEquals("RAINI",new CadenaAlumnos().extraerSubstring(cadena, pos));
 	}
 
 	@Test
 	public void testExtraerSubstringStringIntInt() {
-		fail("Not yet implemented");
+		String cadena = "Hola";
+		int posInicial = 2;
+		int posFinal = 4;
+		assertEquals("la",new CadenaAlumnos().extraerSubstring(cadena, posInicial, posFinal));
 	}
 
 	@Test
